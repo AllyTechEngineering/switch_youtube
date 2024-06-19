@@ -6,12 +6,13 @@ import 'package:dart_periphery/dart_periphery.dart';
 import 'package:flutter/foundation.dart';
 
 // Define the SwitchService class
-class SwitchService { 
+class SwitchService {
   // Define class properties
   final int gpioPin; // specify the GPIO pin connected to the switch
   final Duration pollInterval;
   final Duration debounceInterval;
-  final StreamController<bool> _switchStateController = StreamController<bool>.broadcast();
+  final StreamController<bool> _switchStateController =
+      StreamController<bool>.broadcast();
   bool _isPolling = false;
   GPIO? _gpio;
 
